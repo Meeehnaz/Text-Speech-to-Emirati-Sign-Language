@@ -1,0 +1,18 @@
+# Ignore log files
+*.log
+
+# Ignore specific files
+
+video_names.txt
+test.py
+test2.py
+standardizeVideos.py
+speech.py
+names.py
+env.py
+play_videos.py
+
+# Ignore folders
+mov/
+ESL/
+ESL_Processed/
