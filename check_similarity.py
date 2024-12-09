@@ -7,10 +7,7 @@ import os
 from env import client
 
 phrase_video_dict = {
-    "how are you": "how_are_you",
-    # "good morning": "GoodMorning",
-    # "good evening": "GoodEvening",
-    # "Date of Birth": "DateOfBirth"
+    "how are you": "how_are_you"
     }
 
 
@@ -47,7 +44,6 @@ def check_semantic_similarity(word1, word2):
         print(f"Error with Azure OpenAI API: {e}")
 
 
-
 def find_most_similar_video_for_word(word, similarity_threshold=0.6):
 
     word_embedding = get_embeddings(word)
@@ -80,7 +76,6 @@ def find_most_similar_video_for_word(word, similarity_threshold=0.6):
         return best_match_video, max_similarity  # Retain video if similarity is above threshold
 
     return None, max_similarity  # Exclude if similarity is below 0.4
-
 
 
 def translate_sentence_to_videos(user_input, similarity_threshold=0.8):
